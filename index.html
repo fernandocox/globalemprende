@@ -35,4 +35,78 @@
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1rem;
       padding: 1rem 2rem;
-      animation: slideUp 1.2s ease-in-ou
+      animation: slideUp 1.2s ease-in-out;
+    }
+
+    .collage img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .collage img:hover {
+      transform: scale(1.03);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta a {
+      background: #10b981;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #059669;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      opacity: 0.6;
+      padding: 2rem 1rem;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fernando Cox</h1>
+    <p>Economista en Gestión Empresarial | 10+ años ayudando a empresas a ganar más</p>
+    <p>¿No sabes si estás ganando o perdiendo dinero en tu negocio?<br> Nosotros te ayudamos a descubrirlo.</p>
+  </header>
+
+  <section class="collage">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d3" alt="Asesoría financiera" />
+    <img src="https://images.unsplash.com/photo-1581093588401-9e74c99b2b3e" alt="Análisis de datos" />
+    <img src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd" alt="Reunión de negocios" />
+    <img src="https://images.unsplash.com/photo-1525186402429-b4ff38bedec6" alt="Progreso financiero" />
+  </section>
+
+  <div class="cta">
+    <a href="https://wa.me/593988167524" target="_blank">Habla con Fernando por WhatsApp</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Fernando Cox. Todos los derechos reservados.
+  </footer>
+</body>
+</html>
