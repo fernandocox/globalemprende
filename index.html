@@ -6,16 +6,31 @@
   <title>Global Emprende | Asesoría Profesional</title>
   
   <!-- SEO básico -->
-  <meta name="description" content="Asesoría profesional para emprendedores: Finanzas, marketing, formalización y mentoría personalizada." />
+  <meta name="description" content="Asesoría profesional para emprendedores: Finanzas, marketing, formalización y mentoría personalizada en Machala." />
   <meta name="author" content="Fernando Cox" />
-  
+  <meta name="geo.region" content="EC-M" />
+  <meta name="geo.placename" content="Machala, El Oro" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Global Emprende | Asesoría Profesional para Emprendedores" />
+  <meta property="og:description" content="Diagnóstico, finanzas, marketing y mentoría personalizada para emprendedores. Atención en Machala y todo Ecuador." />
+  <meta property="og:image" content="https://fernandocox.github.io/globalemprende/logo-global-emprende.png" />
+  <meta property="og:url" content="https://fernandocox.github.io/globalemprende/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Global Emprende | Asesoría Profesional" />
+  <meta name="twitter:description" content="Apoyo integral para emprendedores: Finanzas, marketing y más." />
+  <meta name="twitter:image" content="https://fernandocox.github.io/globalemprende/logo-global-emprende.png" />
+
   <!-- Favicon -->
   <link rel="icon" href="https://yourdomain.com/favicon.ico" type="image/x-icon" />
   
-  <!-- Google Fonts (opcional) -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   
-  <!-- Íconos redes sociales -->
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
   <style>
@@ -34,21 +49,29 @@
       scroll-behavior: smooth;
     }
     header {
-      background: rgba(15, 32, 39, 0.85);
-      backdrop-filter: blur(10px);
-      padding: 10px 40px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #e0f7fa, #203a43, #0f2027);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      z-index: 10;
       position: sticky;
       top: 0;
-      z-index: 1100;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
     header img {
-      height: 80px;
-      width: auto;
+      height: 140px;
+      max-width: 300px;
       object-fit: contain;
+      margin-right: 20px;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
+    }
+    header h1 {
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 0;
+      flex-grow: 1;
     }
     nav ul {
       list-style: none;
@@ -332,6 +355,7 @@
       }
       header img {
         height: 65px;
+        max-width: 140px;
       }
       section {
         padding: 40px 15px;
@@ -398,198 +422,195 @@
 </head>
 <body>
 
-  <header style="display: flex; align-items: center; padding: 10px 20px; background: linear-gradient(to right, #0f2027, #203a43, #2c5364); box-shadow: 0 2px 10px rgba(0,0,0,0.3); z-index: 10;">
-  <img src="logo-global-emprende.png" alt="Logo Global Emprende" style="height: 300px; max-width: 420px; object-fit: contain; margin-right: 20px; filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));" />
-  <h1 style="color: white; font-size: 2rem; font-weight: 600; margin: 0;"></h1>
-  
-  <nav>
-    <ul id="nav-links">
-      <li><a href="#perfil">Sobre Mí</a></li>
-      <li>
-        <a href="#servicios">Servicios</a>
-        <ul>
-          <li><a href="#diagnostico">Diagnóstico Empresarial</a></li>
-          <li><a href="#finanzas">Asesoría Financiera</a></li>
-          <li><a href="#formalizacion">Formalización</a></li>
-          <li><a href="#web">Páginas Web</a></li>
-          <li><a href="#marketing">Marketing</a></li>
-          <li><a href="#contabilidad">Contabilidad</a></li>
-          <li><a href="#mentoria">Mentoría</a></li>
-        </ul>
-      </li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
+  <header>
+    <img src="logo-global-emprende.png" alt="Logo Global Emprende" />
+    <h1>Asesoría para Emprendedores</h1>
 
-  <!-- Burger menu para móvil -->
-  <div class="burger" id="burger" aria-label="Menú móvil" aria-expanded="false" role="button" tabindex="0">
-    <div></div>
-    <div></div>
-    <div></div>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#perfil">Sobre Mí</a></li>
+        <li>
+          <a href="#servicios">Servicios</a>
+          <ul>
+            <li><a href="#diagnostico">Diagnóstico Empresarial</a></li>
+            <li><a href="#finanzas">Asesoría Financiera</a></li>
+            <li><a href="#formalizacion">Formalización</a></li>
+            <li><a href="#web">Páginas Web</a></li>
+            <li><a href="#marketing">Marketing</a></li>
+            <li><a href="#contabilidad">Contabilidad</a></li>
+            <li><a href="#mentoria">Mentoría</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Burger menu para móvil -->
+    <div class="burger" id="burger" aria-label="Menú móvil" aria-expanded="false" role="button" tabindex="0">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <div class="slider">
+    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" alt="Planificación entre emprendedores" />
+    <img src="https://images.pexels.com/photos/8349236/pexels-photo-8349236.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" alt="Asesoría y mentoría empresarial" />
+    <img src="https://images.pexels.com/photos/6693654/pexels-photo-6693654.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" class="active" alt="Analítica de datos en laptop" />
+    <img src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd?auto=format&fit=crop&w=1200&h=400&q=80" alt="Emprendedores planificando estrategias" />
+    <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1200&h=400&q=80" alt="Mentoría y crecimiento empresarial" />
   </div>
-</header>
 
-<!-- Slider -->
-<div class="slider">
-  <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" alt="Planificación entre emprendedores" />
-  <img src="https://images.pexels.com/photos/8349236/pexels-photo-8349236.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" alt="Asesoría y mentoría empresarial" />
-  <img src="https://images.pexels.com/photos/6693654/pexels-photo-6693654.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" class="active" alt="Analítica de datos en laptop" />
-  <img src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd?auto=format&fit=crop&w=1200&h=400&q=80" alt="Emprendedores planificando estrategias" />
-  <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1200&h=400&q=80" alt="Mentoría y crecimiento empresarial" />
-</div>
+  <div class="container">
 
-<div class="container">
-
-  <section id="perfil" class="perfil">
-    <h2>Mi Perfil Profesional</h2>
-    <div class="card">
-      <p>Soy <strong>Fernando Cox</strong>, economista con más de 10 años ayudando a emprendedores a tomar decisiones con base en sus números reales. Combino experiencia financiera, legal y digital para ayudarte a tener claridad, orden y crecimiento.</p>
-      <p>En Global Emprende, creo en acompañarte desde la idea hasta que seas rentable. Trabajo contigo para que entiendas tus resultados y puedas avanzar sin miedo a lo desconocido.</p>
-    </div>
-  </section>
-
-  <section id="servicios" class="servicios">
-    <h2>Servicios Profesionales</h2>
-    <div class="grid">
-
-      <div id="diagnostico" class="card">
-        <h3>📊 Diagnóstico Empresarial</h3>
-        <p>Análisis gratuito para saber si estás ganando o perdiendo. Incluye plan de acción inicial.</p>
-      </div>
-
-      <div id="finanzas" class="card">
-        <h3>💼 Asesoría Financiera</h3>
-        <p>Control de costos, proyección de flujo, análisis de precios. Toma decisiones con base real.</p>
-      </div>
-
-      <div id="formalizacion" class="card">
-        <h3>📑 Formalización de Negocios</h3>
-        <p>Registro RUC, SRI, permisos municipales. Todo para operar legalmente sin errores.</p>
-      </div>
-
-      <div id="web" class="card">
-        <h3>💻 Páginas Web Profesionales</h3>
-        <p>Tu sitio conectado a WhatsApp y redes sociales, económico y funcional para mostrar tu marca.</p>
-      </div>
-
-      <div id="marketing" class="card">
-        <h3>📣 Marketing Digital Estratégico</h3>
-        <p>Campañas en redes, creación de contenido y posicionamiento online para atraer más clientes.</p>
-      </div>
-
-      <div id="contabilidad" class="card">
-        <h3>🧾 Contabilidad & SRI</h3>
-        <p>Evita sanciones. Incluye facturación electrónica y declaraciones tributarias.</p>
-      </div>
-
-      <div id="mentoria" class="card">
-        <h3>🤝 Mentoría Personalizada</h3>
-        <p>Sesiones 1 a 1 para revisar ideas, números y crecer con dirección y confianza.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="testimonios">
-    <h2>Testimonios</h2>
-    <div class="grid">
+    <section id="perfil" class="perfil">
+      <h2>Mi Perfil Profesional</h2>
       <div class="card">
-        <p>Fernando me ayudó a entender mis números y ahora mi negocio crece sin miedo. Muy recomendado.</p>
-        <div class="autor">— María López</div>
+        <p>Soy <strong>Fernando Cox</strong>, economista con más de 10 años ayudando a emprendedores a tomar decisiones con base en sus números reales. Combino experiencia financiera, legal y digital para ayudarte a tener claridad, orden y crecimiento.</p>
+        <p>En Global Emprende, creo en acompañarte desde la idea hasta que seas rentable. Trabajo contigo para que entiendas tus resultados y puedas avanzar sin miedo a lo desconocido.</p>
       </div>
-      <div class="card">
-        <p>Su asesoría financiera cambió totalmente la forma en que gestiono mi empresa. ¡Gracias, Fernando!</p>
-        <div class="autor">— Carlos Méndez</div>
+    </section>
+
+    <section id="servicios" class="servicios">
+      <h2>Servicios Profesionales</h2>
+      <div class="grid">
+
+        <div id="diagnostico" class="card">
+          <h3>📊 Diagnóstico Empresarial</h3>
+          <p>Análisis gratuito para saber si estás ganando o perdiendo. Incluye plan de acción inicial.</p>
+        </div>
+
+        <div id="finanzas" class="card">
+          <h3>💼 Asesoría Financiera</h3>
+          <p>Control de costos, proyección de flujo, análisis de precios. Toma decisiones con base real.</p>
+        </div>
+
+        <div id="formalizacion" class="card">
+          <h3>📑 Formalización de Negocios</h3>
+          <p>Registro RUC, SRI, permisos municipales. Todo para operar legalmente sin errores.</p>
+        </div>
+
+        <div id="web" class="card">
+          <h3>💻 Páginas Web Profesionales</h3>
+          <p>Diseño web funcional, atractivo y optimizado para que tus clientes te encuentren fácil.</p>
+        </div>
+
+        <div id="marketing" class="card">
+          <h3>📢 Marketing Digital</h3>
+          <p>Redes sociales, anuncios, estrategias para aumentar tus ventas y presencia online.</p>
+        </div>
+
+        <div id="contabilidad" class="card">
+          <h3>🧾 Contabilidad y Reportes</h3>
+          <p>Lleva tus registros al día para que puedas cumplir con obligaciones y crecer ordenado.</p>
+        </div>
+
+        <div id="mentoria" class="card">
+          <h3>🎯 Mentoría Empresarial</h3>
+          <p>Acompañamiento personalizado para que superes obstáculos y potencies tus resultados.</p>
+        </div>
+
       </div>
-      <div class="card">
-        <p>Me encantó la mentoría personalizada. Ahora tengo claridad y confianza para avanzar.</p>
-        <div class="autor">— Ana Rodríguez</div>
+    </section>
+
+    <section id="testimonios">
+      <h2>Testimonios</h2>
+      <div class="grid">
+        <div class="card">
+          “Gracias a Fernando entendí mis números y ahora tomo mejores decisiones. ¡Muy recomendado!”
+          <div class="autor">– Ana María, Emprendedora</div>
+        </div>
+        <div class="card">
+          “El diagnóstico gratuito me abrió los ojos, y con la asesoría pude crecer mi negocio sin miedo.”
+          <div class="autor">– Carlos R., Pyme Local</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="noticias">
-    <h2>Noticias de Emprendimiento</h2>
-    <article>
-      <h4>5 claves para mejorar la gestión financiera en tu negocio</h4>
-      <p>Conoce cómo organizar tus finanzas y evitar errores comunes que afectan tus resultados.</p>
-      <a href="https://example.com/noticia1" target="_blank" rel="noopener noreferrer">Leer más</a>
-    </article>
-    <article>
-      <h4>Tendencias de marketing digital para emprendedores 2025</h4>
-      <p>Descubre las estrategias que están funcionando para atraer más clientes y crecer online.</p>
-      <a href="https://example.com/noticia2" target="_blank" rel="noopener noreferrer">Leer más</a>
-    </article>
-    <article>
-      <h4>Cómo formalizar tu negocio de forma sencilla y segura</h4>
-      <p>Te explicamos los pasos legales que todo emprendedor debe conocer para evitar sanciones.</p>
-      <a href="https://example.com/noticia3" target="_blank" rel="noopener noreferrer">Leer más</a>
-    </article>
-  </section>
+    <section id="noticias">
+      <h2>Noticias de Emprendimiento</h2>
+      <article>
+        <h4>5 tendencias de marketing digital en 2025</h4>
+        <p>Conoce las estrategias que están revolucionando la forma en que las pymes venden online. <a href="https://example.com/marketing-2025" target="_blank" rel="noopener">Leer más</a></p>
+      </article>
+      <article>
+        <h4>Beneficios de formalizar tu negocio en Ecuador</h4>
+        <p>Descubre cómo la formalización te abre puertas y protege tu emprendimiento. <a href="https://example.com/formalizacion-ecuador" target="_blank" rel="noopener">Leer más</a></p>
+      </article>
+    </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <form id="contact-form" action="https://formsubmit.co/fernando_cox@live.com" method="POST" target="_blank">
-      <input type="text" name="name" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu correo electrónico" required />
-      <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
-</div>
+    <section id="contacto">
+      <h2>Contacto y Asesoría</h2>
+      <form id="contact-form" action="https://formsubmit.co/fernando_cox@live.com" method="POST" target="_blank">
+        <input type="hidden" name="_next" value="https://fernandocox.github.io/globalemprende/agradecimiento.html" />
+        <input type="text" name="name" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
 
-<!-- WhatsApp fijo -->
-<a href="https://wa.me/593988167524" target="_blank" aria-label="WhatsApp" class="whatsapp-btn" title="Contáctame por WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
-<footer>
-  © 2025 Global Emprende | Fernando Cox
-  <div class="social-icons" aria-label="Redes sociales">
-    <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
   </div>
-</footer>
 
-<script>
-  // Slider automático
-  let current = 0;
-  const slides = document.querySelectorAll('.slider img');
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 4000);
+  <!-- Botón WhatsApp fijo -->
+  <a href="https://wa.me/593999999999" target="_blank" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-  // Scroll animation para secciones
-  function revealOnScroll() {
+  <footer>
+    <p>© 2025 Global Emprende - Asesoría Profesional en Machala</p>
+    <div class="social-icons" aria-label="Redes sociales">
+      <a href="https://facebook.com/globalemprende" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com/globalemprende" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/fernando-cox" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Slider automático simple
+    const slides = document.querySelectorAll('.slider img');
+    let currentSlide = 0;
+    const changeInterval = 4000;
+
+    function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide+1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+    setInterval(nextSlide, changeInterval);
+
+    // Animar secciones al hacer scroll
     const sections = document.querySelectorAll('section');
-    const triggerBottom = window.innerHeight * 0.85;
-    sections.forEach(section => {
-      const top = section.getBoundingClientRect().top;
-      if(top < triggerBottom) {
-        section.classList.add('visible');
+    function showSections() {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if(sectionTop < triggerBottom){
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', showSections);
+    window.addEventListener('load', showSections);
+
+    // Menú móvil
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+      burger.setAttribute('aria-expanded', !expanded);
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('show');
+    });
+    burger.addEventListener('keypress', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        burger.click();
       }
     });
-  }
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll();
-
-  // Menu burger móvil
-  const burger = document.getElementById('burger');
-  const navLinks = document.getElementById('nav-links');
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    burger.classList.toggle('open');
-    burger.setAttribute('aria-expanded', burger.classList.contains('open'));
-  });
-  burger.addEventListener('keydown', e => {
-    if(e.key === 'Enter' || e.key === ' ') {
-      burger.click();
-    }
-  });
-</script>
+  </script>
 
 </body>
 </html>
+
