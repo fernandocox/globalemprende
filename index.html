@@ -2,615 +2,85 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Global Emprende | Asesoría Profesional</title>
-  
-  <!-- SEO básico -->
-  <meta name="description" content="Asesoría profesional para emprendedores: Finanzas, marketing, formalización y mentoría personalizada en Machala." />
-  <meta name="author" content="Fernando Cox" />
-  <meta name="geo.region" content="EC-M" />
-  <meta name="geo.placename" content="Machala, El Oro" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Global Emprende | Asesoría Profesional para Emprendedores" />
-  <meta property="og:description" content="Diagnóstico, finanzas, marketing y mentoría personalizada para emprendedores. Atención en Machala y todo Ecuador." />
-  <meta property="og:image" content="https://fernandocox.github.io/globalemprende/logo-global-emprende.png" />
-  <meta property="og:url" content="https://fernandocox.github.io/globalemprende/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Global Emprende | Asesoría Profesional" />
-  <meta name="twitter:description" content="Apoyo integral para emprendedores: Finanzas, marketing y más." />
-  <meta name="twitter:image" content="https://fernandocox.github.io/globalemprende/logo-global-emprende.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://yourdomain.com/favicon.ico" type="image/x-icon" />
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-
-  <style>
-    /* Reset básico */
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #2c5364, #0f2027);
-      color: #222;
-      min-height: 100vh;
-      background-attachment: fixed;
-      background-size: cover;
-      background-repeat: no-repeat;
-      scroll-behavior: smooth;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      background: linear-gradient(to right, #e0f7fa, #203a43, #0f2027);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      z-index: 10;
-      position: sticky;
-      top: 0;
-    }
-    header img {
-      height: 140px;
-      max-width: 300px;
-      object-fit: contain;
-      margin-right: 20px;
-      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
-    }
-    header h1 {
-      color: white;
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin: 0;
-      flex-grow: 1;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      font-weight: 600;
-    }
-    nav ul li {
-      position: relative;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-size: 1.1rem;
-    }
-    nav a:hover {
-      color: #00b894;
-    }
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 30px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      padding: 10px 0;
-      min-width: 180px;
-      z-index: 1200;
-    }
-    nav ul li:hover ul {
-      display: block;
-    }
-    nav ul li ul li a {
-      color: #222;
-      padding: 8px 20px;
-      display: block;
-      font-weight: 500;
-    }
-    nav ul li ul li a:hover {
-      background: #00b894;
-      color: white;
-    }
-
-    /* Slider */
-    .slider {
-      position: relative;
-      max-height: 400px;
-      overflow: hidden;
-      margin: 30px auto 50px;
-      max-width: 1200px;
-      border-radius: 15px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-      background: #000;
-    }
-    .slider img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      display: none;
-      transition: opacity 1s ease;
-    }
-    .slider img.active {
-      display: block;
-    }
-
-    /* Contenedor principal */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    /* Secciones */
-    section {
-      padding: 60px 20px;
-      background: rgba(255,255,255,0.95);
-      border-radius: 15px;
-      margin-bottom: 40px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    section.visible {
-      opacity: 1;
-      transform: none;
-    }
-    section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 30px;
-      color: #0f2027;
-      text-align: center;
-      font-weight: 700;
-    }
-
-    /* Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    .card h3 {
-      margin-bottom: 15px;
-      color: #00b894;
-    }
-    .card p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
-    }
-
-    /* Perfil */
-    #perfil .card p {
-      font-size: 1.1rem;
-      color: #333;
-      font-weight: 500;
-      line-height: 1.8;
-    }
-
-    /* Contacto */
-    #contacto {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #00b894;
-      color: white;
-      border-radius: 12px;
-      padding: 30px 25px;
-      box-shadow: 0 10px 20px rgba(0,184,148,0.3);
-    }
-    #contacto h2 {
-      color: white;
-      margin-bottom: 25px;
-      font-weight: 700;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-    form input, form textarea {
-      padding: 12px 15px;
-      border-radius: 8px;
-      border: none;
-      font-size: 1rem;
-      resize: none;
-      font-family: 'Montserrat', sans-serif;
-    }
-    form input:focus, form textarea:focus {
-      outline: 2px solid #095d4b;
-    }
-    form button {
-      background: #083d2a;
-      color: white;
-      font-weight: 700;
-      padding: 15px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    form button:hover {
-      background: #00b894;
-    }
-
-    /* WhatsApp fijo */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25D366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 8px 15px rgba(37, 211, 102, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: box-shadow 0.3s ease;
-      z-index: 1500;
-      cursor: pointer;
-    }
-    .whatsapp-btn:hover {
-      box-shadow: 0 42px 60px rgba(37, 211, 102, 0.8);
-    }
-    .whatsapp-btn i {
-      color: white;
-      font-size: 2rem;
-    }
-
-    /* Testimonios */
-    #testimonios .card {
-      font-style: italic;
-      color: #555;
-      position: relative;
-      padding-left: 50px;
-    }
-    #testimonios .card::before {
-      content: "“";
-      font-size: 4rem;
-      position: absolute;
-      left: 15px;
-      top: 10px;
-      color: #00b894;
-      font-weight: 900;
-      font-family: serif;
-    }
-    #testimonios .autor {
-      margin-top: 15px;
-      font-weight: 700;
-      color: #0f2027;
-      text-align: right;
-    }
-
-    /* Noticias */
-    #noticias article {
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-    #noticias article h4 {
-      margin-bottom: 8px;
-      color: #0f2027;
-    }
-    #noticias article p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    #noticias article a {
-      color: #00b894;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    #noticias article a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(15, 32, 39, 0.95);
-      color: #fff;
-      text-align: center;
-      padding: 25px 20px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      box-shadow: 0 -4px 10px rgba(0,0,0,0.4);
-    }
-    footer .social-icons {
-      margin-top: 10px;
-    }
-    footer .social-icons a {
-      color: #00b894;
-      margin: 0 12px;
-      font-size: 1.4rem;
-      transition: color 0.3s ease;
-    }
-    footer .social-icons a:hover {
-      color: #fff;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      nav ul {
-        gap: 18px;
-      }
-      header {
-        padding: 15px 20px;
-      }
-      header img {
-        height: 65px;
-        max-width: 140px;
-      }
-      section {
-        padding: 40px 15px;
-      }
-    }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        background: rgba(15,32,39,0.95);
-        position: fixed;
-        top: 80px;
-        right: -100%;
-        width: 220px;
-        height: calc(100% - 80px);
-        padding-top: 30px;
-        gap: 20px;
-        transition: right 0.3s ease;
-        border-radius: 0 0 0 15px;
-      }
-      nav ul.show {
-        right: 0;
-      }
-      nav ul li ul {
-        position: static;
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-      }
-      nav ul li:hover ul {
-        display: none;
-      }
-      nav ul li a {
-        font-size: 1.2rem;
-        color: white;
-      }
-      /* Burger menu */
-      .burger {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 28px;
-        height: 24px;
-        cursor: pointer;
-        z-index: 1500;
-      }
-      .burger div {
-        width: 28px;
-        height: 3px;
-        background: white;
-        border-radius: 3px;
-        transition: all 0.3s ease;
-      }
-      .burger.open div:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      .burger.open div:nth-child(2) {
-        opacity: 0;
-      }
-      .burger.open div:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Emprende | Asesoría Empresarial</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header>
-    <img src="logo-global-emprende.png" alt="Logo Global Emprende" />
-    <h1>Asesoría para Emprendedores</h1>
-
-    <nav>
-      <ul id="nav-links">
-        <li><a href="#perfil">Sobre Mí</a></li>
-        <li>
-          <a href="#servicios">Servicios</a>
-          <ul>
-            <li><a href="#diagnostico">Diagnóstico Empresarial</a></li>
-            <li><a href="#finanzas">Asesoría Financiera</a></li>
-            <li><a href="#formalizacion">Formalización</a></li>
-            <li><a href="#web">Páginas Web</a></li>
-            <li><a href="#marketing">Marketing</a></li>
-            <li><a href="#contabilidad">Contabilidad</a></li>
-            <li><a href="#mentoria">Mentoría</a></li>
-          </ul>
-        </li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-
-    <!-- Burger menu para móvil -->
-    <div class="burger" id="burger" aria-label="Menú móvil" aria-expanded="false" role="button" tabindex="0">
-      <div></div>
-      <div></div>
-      <div></div>
+  <header class="hero">
+    <div class="contenido">
+      <img src="logo-global-emprende.png" class="logo" alt="Logo Global Emprende" />
+      <h1>Transforma tu Emprendimiento</h1>
+      <p>Diagnóstico, finanzas, legalización y más, con estilo profesional.</p>
+      <a href="#servicios" class="btn">Comienza Ahora</a>
     </div>
   </header>
 
-  <!-- Slider -->
-  <div class="slider">
-    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" alt="Planificación entre emprendedores" />
-    <img src="https://images.pexels.com/photos/8349236/pexels-photo-8349236.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" alt="Asesoría y mentoría empresarial" />
-    <img src="https://images.pexels.com/photos/6693654/pexels-photo-6693654.jpeg?auto=compress&cs=tinysrgb&h=400&w=1200" class="active" alt="Analítica de datos en laptop" />
-    <img src="https://images.unsplash.com/photo-1523958203904-cdcb402031fd?auto=format&fit=crop&w=1200&h=400&q=80" alt="Emprendedores planificando estrategias" />
-    <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?auto=format&fit=crop&w=1200&h=400&q=80" alt="Mentoría y crecimiento empresarial" />
-  </div>
-
-  <div class="container">
-
-    <section id="perfil" class="perfil">
-      <h2>Mi Perfil Profesional</h2>
-      <div class="card">
-        <p>Soy <strong>Fernando Cox</strong>, economista con más de 10 años ayudando a emprendedores a tomar decisiones con base en sus números reales. Combino experiencia financiera, legal y digital para ayudarte a tener claridad, orden y crecimiento.</p>
-        <p>En Global Emprende, creo en acompañarte desde la idea hasta que seas rentable. Trabajo contigo para que entiendas tus resultados y puedas avanzar sin miedo a lo desconocido.</p>
-      </div>
-    </section>
-
+  <main>
     <section id="servicios" class="servicios">
-      <h2>Servicios Profesionales</h2>
-      <div class="grid">
+      <h2>Servicios Empresariales</h2>
+      <div class="tarjetas">
 
-        <div id="diagnostico" class="card">
-          <h3>📊 Diagnóstico Empresarial</h3>
-          <p>Análisis gratuito para saber si estás ganando o perdiendo. Incluye plan de acción inicial.</p>
+        <div class="servicio">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/411/411763.png" alt="Diagnóstico Empresarial" />
+          </div>
+          <h3>Diagnóstico Empresarial</h3>
+          <p>Analizo el estado real de tu negocio y detectamos áreas críticas juntos.</p>
         </div>
 
-        <div id="finanzas" class="card">
-          <h3>💼 Asesoría Financiera</h3>
-          <p>Control de costos, proyección de flujo, análisis de precios. Toma decisiones con base real.</p>
+        <div class="servicio">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="Finanzas" />
+          </div>
+          <h3>Gestión Financiera</h3>
+          <p>Te ayudo a entender tus números, calcular precios y tomar decisiones con base real.</p>
         </div>
 
-        <div id="formalizacion" class="card">
-          <h3>📑 Formalización de Negocios</h3>
-          <p>Registro RUC, SRI, permisos municipales. Todo para operar legalmente sin errores.</p>
+        <div class="servicio">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Formalización" />
+          </div>
+          <h3>Formalización Legal</h3>
+          <p>Trámites y procesos para formalizarte ante el SRI y otras instituciones.</p>
         </div>
 
-        <div id="web" class="card">
-          <h3>💻 Páginas Web Profesionales</h3>
-          <p>Diseño web funcional, atractivo y optimizado para que tus clientes te encuentren fácil.</p>
+        <div class="servicio">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png" alt="Marketing Digital" />
+          </div>
+          <h3>Estrategias Digitales</h3>
+          <p>Marketing, redes sociales y automatizaciones adaptadas a tu negocio.</p>
         </div>
 
-        <div id="marketing" class="card">
-          <h3>📢 Marketing Digital</h3>
-          <p>Redes sociales, anuncios, estrategias para aumentar tus ventas y presencia online.</p>
-        </div>
-
-        <div id="contabilidad" class="card">
-          <h3>🧾 Contabilidad y Reportes</h3>
-          <p>Lleva tus registros al día para que puedas cumplir con obligaciones y crecer ordenado.</p>
-        </div>
-
-        <div id="mentoria" class="card">
-          <h3>🎯 Mentoría Empresarial</h3>
-          <p>Acompañamiento personalizado para que superes obstáculos y potencies tus resultados.</p>
+        <div class="servicio">
+          <div class="img-container">
+            <img src="https://cdn-icons-png.flaticon.com/512/927/927567.png" alt="Mentoría" />
+          </div>
+          <h3>Mentoría Personalizada</h3>
+          <p>Acompañamiento 1 a 1 para ayudarte a avanzar con claridad y orden.</p>
         </div>
 
       </div>
     </section>
+  </main>
 
-    <section id="testimonios">
-      <h2>Testimonios</h2>
-      <div class="grid">
-        <div class="card">
-          “Gracias a Fernando entendí mis números y ahora tomo mejores decisiones. ¡Muy recomendado!”
-          <div class="autor">– Ana María, Emprendedora</div>
-        </div>
-        <div class="card">
-          “El diagnóstico gratuito me abrió los ojos, y con la asesoría pude crecer mi negocio sin miedo.”
-          <div class="autor">– Carlos R., Pyme Local</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="noticias">
-      <h2>Noticias de Emprendimiento</h2>
-      <article>
-        <h4>5 tendencias de marketing digital en 2025</h4>
-        <p>Conoce las estrategias que están revolucionando la forma en que las pymes venden online. <a href="https://example.com/marketing-2025" target="_blank" rel="noopener">Leer más</a></p>
-      </article>
-      <article>
-        <h4>Beneficios de formalizar tu negocio en Ecuador</h4>
-        <p>Descubre cómo la formalización te abre puertas y protege tu emprendimiento. <a href="https://example.com/formalizacion-ecuador" target="_blank" rel="noopener">Leer más</a></p>
-      </article>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto y Asesoría</h2>
-      <form id="contact-form" action="https://formsubmit.co/fernando_cox@live.com" method="POST" target="_blank">
-        <input type="hidden" name="_next" value="https://fernandocox.github.io/globalemprende/agradecimiento.html" />
-        <input type="text" name="name" placeholder="Tu nombre" required />
-        <input type="email" name="email" placeholder="Tu correo electrónico" required />
-        <textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        <button type="submit">Enviar mensaje</button>
-      </form>
-    </section>
-
-  </div>
-
-  <!-- Botón WhatsApp fijo -->
-  <a href="https://wa.me/593988167524" target="_blank" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+  <a href="https://wa.me/593999999999" class="whatsapp-btn" aria-label="WhatsApp Global Emprende">
     <i class="fab fa-whatsapp"></i>
   </a>
 
   <footer>
-    <p>© 2025 Global Emprende - Asesoría Profesional en Machala</p>
-    <div class="social-icons" aria-label="Redes sociales">
-      <a href="https://facebook.com/globalemprende" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://instagram.com/globalemprende" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/fernando-cox" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <p>&copy; 2025 Global Emprende | Fernando Cox</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </footer>
 
-  <script>
-    // Slider automático simple
-    const slides = document.querySelectorAll('.slider img');
-    let currentSlide = 0;
-    const changeInterval = 4000;
-
-    function nextSlide() {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide+1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }
-    setInterval(nextSlide, changeInterval);
-
-    // Animar secciones al hacer scroll
-    const sections = document.querySelectorAll('section');
-    function showSections() {
-      const triggerBottom = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if(sectionTop < triggerBottom){
-          section.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', showSections);
-    window.addEventListener('load', showSections);
-
-    // Menú móvil
-    const burger = document.getElementById('burger');
-    const navLinks = document.getElementById('nav-links');
-    burger.addEventListener('click', () => {
-      const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
-      burger.setAttribute('aria-expanded', !expanded);
-      burger.classList.toggle('open');
-      navLinks.classList.toggle('show');
-    });
-    burger.addEventListener('keypress', (e) => {
-      if(e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        burger.click();
-      }
-    });
-  </script>
-
 </body>
 </html>
+
 
