@@ -14,17 +14,21 @@
     header {
       background-color: #0a0a23;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 1000;
+    }
+    header img {
+      height: 50px;
     }
     nav ul {
       list-style: none;
       padding: 0;
       display: flex;
-      justify-content: center;
       gap: 30px;
     }
     nav ul li {
@@ -51,36 +55,33 @@
       display: block;
       padding: 5px 10px;
     }
-    .hero {
-      background: linear-gradient(to right, #0a0a23, #1c1c3b);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+
+    .slider {
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      position: relative;
     }
-    .hero h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+    .slider img {
+      width: 100%;
+      display: none;
+      object-fit: cover;
+      height: 400px;
     }
-    .hero p {
-      font-size: 1.2em;
-      max-width: 800px;
-      margin: auto;
+    .slider img.active {
+      display: block;
     }
-    .servicios, .perfil {
+
+    .perfil, .servicios {
       padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
-    .servicios h2, .perfil h2 {
+    .perfil h2, .servicios h2 {
       text-align: center;
       font-size: 2em;
       margin-bottom: 40px;
       color: #0a0a23;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
     }
     .card {
       background: white;
@@ -92,8 +93,12 @@
     .card:hover {
       transform: translateY(-5px);
     }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
     .card h3 {
-      margin-top: 0;
       color: #0a0a23;
     }
     .contacto {
@@ -122,7 +127,7 @@
 <body>
 
 <header>
-  <h1>GLOBAL EMPRENDE</h1>
+  <img src="https://i.imgur.com/sqzJbLM.png" alt="Logo Global Emprende" />
   <nav>
     <ul>
       <li><a href="#perfil">Sobre Mí</a></li>
@@ -133,78 +138,4 @@
           <li><a href="#formalizacion">Formalización</a></li>
           <li><a href="#web">Páginas Web</a></li>
           <li><a href="#marketing">Marketing</a></li>
-          <li><a href="#contabilidad">Contabilidad</a></li>
-          <li><a href="#mentoria">Mentoría</a></li>
-        </ul>
-      </li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Asesoría Integral para Emprendedores</h1>
-  <p>Te ayudamos a descubrir si estás ganando o perdiendo, a formalizar tu negocio y a crecer con estrategias digitales reales.</p>
-</section>
-
-<section id="perfil" class="perfil">
-  <h2>Mi Perfil Profesional</h2>
-  <div class="card">
-    <p>Soy <strong>Fernando Cox</strong>, economista y asesor de negocios con más de 10 años de experiencia ayudando a emprendedores y empresas a estructurar sus finanzas, legalizar su actividad y tomar decisiones estratégicas con información real.</p>
-    <p>Mi misión es que ningún emprendedor camine a ciegas. Trabajo contigo para que entiendas tus números, optimices tus recursos y construyas una base sólida para crecer.</p>
-  </div>
-</section>
-
-<section id="servicios" class="servicios">
-  <h2>Servicios Profesionales</h2>
-  <div class="grid">
-
-    <div id="diagnostico" class="card">
-      <h3>📊 Diagnóstico Empresarial</h3>
-      <p>Evaluamos tu negocio sin costo para saber si estás perdiendo o ganando. Incluye reporte básico y plan de acción.</p>
-    </div>
-
-    <div id="finanzas" class="card">
-      <h3>💼 Asesoría Financiera</h3>
-      <p>Te ayudamos a controlar tus costos, mejorar tu rentabilidad y proyectar tu flujo de caja con herramientas prácticas.</p>
-    </div>
-
-    <div id="formalizacion" class="card">
-      <h3>📑 Formalización de Negocios</h3>
-      <p>RUC, SRI, permisos y más. Todo lo necesario para que tu emprendimiento funcione legalmente sin complicaciones.</p>
-    </div>
-
-    <div id="web" class="card">
-      <h3>💻 Creación de Páginas Web</h3>
-      <p>Diseñamos sitios profesionales conectados con WhatsApp, ideales para emprendedores que desean presencia digital.</p>
-    </div>
-
-    <div id="marketing" class="card">
-      <h3>📣 Marketing Digital</h3>
-      <p>Estrategias reales en redes sociales, contenido visual y campañas que sí convierten. Posiciona tu marca con confianza.</p>
-    </div>
-
-    <div id="contabilidad" class="card">
-      <h3>🧾 Contabilidad y Obligaciones</h3>
-      <p>Evita multas. Incluye facturación electrónica, declaraciones mensuales y asesoría tributaria clara y actualizada.</p>
-    </div>
-
-    <div id="mentoria" class="card">
-      <h3>🤝 Mentoría Personalizada</h3>
-      <p>Acompañamiento 1 a 1 para revisar tu negocio, responder tus dudas y guiarte en decisiones clave con confianza.</p>
-    </div>
-
-  </div>
-
-  <div id="contacto" class="contacto">
-    <a class="btn" href="https://wa.me/593XXXXXXXXX" target="_blank">Contáctame por WhatsApp</a><br>
-    <small>o escríbeme a <strong>fernando_cox@live.com</strong></small>
-  </div>
-</section>
-
-<footer>
-  © 2025 Global Emprende | Fernando Cox
-</footer>
-
-</body>
-</html>
+          <li><
