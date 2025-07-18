@@ -7,12 +7,12 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(to right, #f9d423 30%, #1e3c72 100%);
+  background: linear-gradient(to right, #f9d423 30%, #f9d423 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #1e3c72;
+  color: #f9d423;
   padding: 2rem;
 }
 
