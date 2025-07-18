@@ -7,12 +7,12 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(to right, #c0c0c0 30%, #1e3c72 100%);
+  background: linear-gradient(to right, #f9d423 30%, #1e3c72 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #c0c0c0;
+  color: #1e3c72;
   padding: 2rem;
 }
 
@@ -20,7 +20,7 @@ body {
 
 .logo {
   width: 200px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .btn {
