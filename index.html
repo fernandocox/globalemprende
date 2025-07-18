@@ -1,130 +1,75 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- Submenú en el header -->
+<nav style="background:#0a0a23; padding: 10px;">
+  <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;">
+    <li style="position: relative;">
+      <a href="#" style="color: white; text-decoration: none;">Servicios</a>
+      <ul style="position: absolute; top: 30px; background: white; padding: 10px; display: none; box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 10;">
+        <li><a href="#diagnostico" style="color:#333; text-decoration:none;">Diagnóstico Empresarial</a></li>
+        <li><a href="#finanzas" style="color:#333; text-decoration:none;">Asesoría Financiera</a></li>
+        <li><a href="#formalizacion" style="color:#333; text-decoration:none;">Formalización de Negocio</a></li>
+        <li><a href="#web" style="color:#333; text-decoration:none;">Páginas Web</a></li>
+        <li><a href="#marketing" style="color:#333; text-decoration:none;">Marketing Digital</a></li>
+        <li><a href="#contabilidad" style="color:#333; text-decoration:none;">Contabilidad</a></li>
+        <li><a href="#mentoria" style="color:#333; text-decoration:none;">Mentoría</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Emprende - Asesoría Empresarial</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-    }
+<script>
+  // Mostrar/ocultar submenú
+  document.querySelector("nav ul li").addEventListener("mouseenter", function() {
+    this.querySelector("ul").style.display = "block";
+  });
+  document.querySelector("nav ul li").addEventListener("mouseleave", function() {
+    this.querySelector("ul").style.display = "none";
+  });
+</script>
 
-    header {
-      padding: 2rem;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
+<!-- Sección de servicios en la misma página -->
+<section id="servicios" style="padding: 50px; background-color: #f5f5f5;">
+  <h2 style="text-align: center;">Nuestros Servicios</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px;">
+    
+    <div id="diagnostico" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>📊 Diagnóstico Empresarial</h3>
+      <p>Análisis gratuito para saber si estás ganando o perdiendo. Incluye reporte y sugerencias iniciales.</p>
+    </div>
+    
+    <div id="finanzas" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>💼 Asesoría Financiera</h3>
+      <p>Control de costos, planificación de ingresos, análisis de precios. Te ayudamos a ordenar tus finanzas.</p>
+    </div>
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+    <div id="formalizacion" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>📑 Formalización de Negocios</h3>
+      <p>Te ayudamos con tu RUC, SRI y permisos para que tu negocio funcione sin problemas legales.</p>
+    </div>
 
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+    <div id="web" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>💻 Creación de Página Web</h3>
+      <p>Tu sitio profesional conectado a WhatsApp y redes. Ideal para mostrar tu catálogo de servicios o productos.</p>
+    </div>
 
-    .hero {
-      text-align: center;
-      padding: 2rem;
-    }
+    <div id="marketing" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>📣 Marketing Digital</h3>
+      <p>Campañas efectivas en redes sociales, diseño de contenido, posicionamiento de marca para atraer más clientes.</p>
+    </div>
 
-    .hero img {
-      width: 90%;
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #00000055;
-      margin-bottom: 1rem;
-    }
+    <div id="contabilidad" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>🧾 Contabilidad y Declaraciones</h3>
+      <p>Evita sanciones del SRI. Incluye facturación electrónica y declaraciones mensuales/anuales.</p>
+    </div>
 
-    section.form-section {
-      background: white;
-      color: #333;
-      padding: 2rem;
-      border-radius: 12px;
-      margin: 2rem auto;
-      max-width: 600px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+    <div id="mentoria" style="background: white; padding: 20px; border-radius: 10px;">
+      <h3>🤝 Mentoría Personalizada</h3>
+      <p>Te acompañamos paso a paso con sesiones 1 a 1, revisamos tus ideas y te guiamos al éxito.</p>
+    </div>
 
-    section.form-section h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    input, textarea {
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    button {
-      background-color: #2c5364;
-      color: white;
-      border: none;
-      padding: 0.8rem;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    button:hover {
-      background-color: #203a43;
-    }
-
-    footer {
-      padding: 2rem;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.6);
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-
-<body>
-  <header>
-    <h1>¿Estás ganando o perdiendo dinero en tu negocio?</h1>
-    <p>Te ayudamos a descubrirlo. Soy <strong>Fernando Cox</strong>, Economista en Gestión Empresarial con más de 10 años de experiencia asesorando empresas en crecimiento.</p>
-  </header>
-
-  <div class="hero">
-    <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Emprendimiento Futurista">
-    <img src="https://images.unsplash.com/photo-1581090700227-1e8e48aa181c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Análisis Empresarial">
   </div>
 
-  <section class="form-section">
-    <h2>¿Necesitas ayuda? Escríbenos</h2>
-    <form action="https://formspree.io/f/mzbllgwj" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required />
-      <input type="email" name="email" placeholder="Tu correo electrónico" required />
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-      <button type="submit">Enviar mensaje por correo</button>
-    </form>
-
-    <div style="text-align:center; margin-top: 1rem;">
-      <a href="https://wa.me/593988167524" target="_blank"
-        style="display:inline-block; padding:0.8rem 1.5rem; background-color:#25D366; color:white; border-radius:6px; text-decoration:none; font-weight:bold;">
-        💬 O contáctame por WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Fernando Cox | Global Emprende | Economista en Gestión Empresarial</p>
-  </footer>
-</body>
-
-</html>
+  <div style="text-align:center; margin-top: 40px;">
+    <a href="https://wa.me/593XXXXXXXXX" target="_blank" style="background: #25D366; color:white; padding: 12px 20px; border-radius: 5px; text-decoration:none; font-weight:bold;">Contáctanos por WhatsApp</a><br>
+    <small style="color: #333;">o escríbenos a <strong>fernando_cox@live.com</strong></small>
+  </div>
+</section>
