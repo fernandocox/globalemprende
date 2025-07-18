@@ -7,7 +7,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(to right, #eaf2fb 30%, #1e3c72 100%);
+  background: linear-gradient(to right, #c0c0c0 30%, #1e3c72 100%);
   display: flex;
   align-items: center;
   justify-content: center;
