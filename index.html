@@ -138,4 +138,91 @@
           <li><a href="#formalizacion">Formalización</a></li>
           <li><a href="#web">Páginas Web</a></li>
           <li><a href="#marketing">Marketing</a></li>
-          <li><
+          <li><a href="#contabilidad">Contabilidad</a></li>
+          <li><a href="#mentoria">Mentoría</a></li>
+        </ul>
+      </li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Slider de imágenes -->
+<div class="slider">
+  <img src="https://i.imgur.com/20UzKBS.jpg" class="active" alt="Asesoría financiera">
+  <img src="https://i.imgur.com/muIcHik.jpg" alt="Emprendedores planificando">
+  <img src="https://i.imgur.com/HuSkXwq.jpg" alt="Marketing Digital">
+</div>
+
+<script>
+  // Slider automático
+  let current = 0;
+  const slides = document.querySelectorAll('.slider img');
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 4000);
+</script>
+
+<section id="perfil" class="perfil">
+  <h2>Mi Perfil Profesional</h2>
+  <div class="card">
+    <p>Soy <strong>Fernando Cox</strong>, economista con más de 10 años ayudando a emprendedores a tomar decisiones con base en sus números reales. Combino experiencia financiera, legal y digital para ayudarte a tener claridad, orden y crecimiento.</p>
+    <p>En Global Emprende, creo en acompañarte desde la idea hasta que seas rentable. Trabajo contigo para que entiendas tus resultados y puedas avanzar sin miedo a lo desconocido.</p>
+  </div>
+</section>
+
+<section id="servicios" class="servicios">
+  <h2>Servicios Profesionales</h2>
+  <div class="grid">
+
+    <div id="diagnostico" class="card">
+      <h3>📊 Diagnóstico Empresarial</h3>
+      <p>Análisis gratuito para saber si estás ganando o perdiendo. Incluye plan de acción inicial.</p>
+    </div>
+
+    <div id="finanzas" class="card">
+      <h3>💼 Asesoría Financiera</h3>
+      <p>Control de costos, proyección de flujo, análisis de precios. Toma decisiones con base real.</p>
+    </div>
+
+    <div id="formalizacion" class="card">
+      <h3>📑 Formalización de Negocios</h3>
+      <p>Registro RUC, SRI, permisos municipales. Todo para operar legalmente sin errores.</p>
+    </div>
+
+    <div id="web" class="card">
+      <h3>💻 Páginas Web Profesionales</h3>
+      <p>Tu sitio conectado a WhatsApp y redes sociales, económico y funcional para mostrar tu marca.</p>
+    </div>
+
+    <div id="marketing" class="card">
+      <h3>📣 Marketing Digital Estratégico</h3>
+      <p>Campañas en redes, creación de contenido y posicionamiento online para atraer más clientes.</p>
+    </div>
+
+    <div id="contabilidad" class="card">
+      <h3>🧾 Contabilidad & SRI</h3>
+      <p>Evita sanciones. Incluye facturación electrónica y declaraciones tributarias.</p>
+    </div>
+
+    <div id="mentoria" class="card">
+      <h3>🤝 Mentoría Personalizada</h3>
+      <p>Sesiones 1 a 1 para revisar ideas, números y crecer con dirección y confianza.</p>
+    </div>
+
+  </div>
+
+  <div id="contacto" class="contacto">
+    <a class="btn" href="https://wa.me/593XXXXXXXXX" target="_blank">Contáctame por WhatsApp</a><br>
+    <small>o escríbeme a <strong>fernando_cox@live.com</strong></small>
+  </div>
+</section>
+
+<footer>
+  © 2025 Global Emprende | Fernando Cox
+</footer>
+
+</body>
+</html>
